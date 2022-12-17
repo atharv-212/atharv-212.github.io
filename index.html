@@ -131,21 +131,16 @@
 				flag = 0;
 			} else { msg[3] = ""; }
 
-			if (mobile_no.value == "") {
-				msg[4] = "Mobile no. is Required";
+			if (email.value == "") {
+				msg[4] = "Email address is Required";
 				flag = 0;
 			} else { msg[4] = ""; }
-
-			if (email.value == "") {
-				msg[5] = "Email address is Required";
-				flag = 0;
-			} else { msg[5] = ""; }
 
 
 
 			if (flag == 0) {
 				// Show Error Messages
-				for (var x = 0; x <= 5; x++) {
+				for (var x = 0; x <= 4; x++) {
 					if (msg[x] != "") {
 						message += msg[x] + "\n";
 						message2 += msg[x] + "<br>";
@@ -181,8 +176,6 @@
 			<br>
 			<label>Address: </label>
 			<input type="text" name="address" text area="add" id="address" placeholder="Enter Address" />
-			<label>Mobile No.: </label>
-			<input type="number" name="mobile_no" id="mobile_no" placeholder="+91">
 			<label>Email address: </label>
 			<input type="email" name="email" text area="add" id="email" placeholder="Enter email address" />
 			<input class="form-check-input" type="checkbox" id="gridCheck">
